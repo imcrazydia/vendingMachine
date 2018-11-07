@@ -146,7 +146,7 @@ public class Main {
             } else if (lc.equals("koud")) {
                 System.out.println("Frisdrank of sap?"); /* Drink vragen koud */
                 o2 = 4;
-                loop = 0;
+                loop = 8;
             } else {
                 System.out.println("Vul 'warm' of 'koud' in.");
             }
@@ -173,6 +173,27 @@ public class Main {
                 }
             } }
 
+        String a8;
+
+        while (loop == 8) {
+
+            a8 = vend.nextLine();
+            lc = a8.toLowerCase();
+
+            if (o2 == 4) {
+                if (lc.equals("frisdrank")) {
+                    System.out.println("Cola of fanta?"); /* drink vragen koud */
+                    o2 = 7;
+                    loop = 0;
+                } else if (lc.equals("sap")) {
+                    System.out.println("Appelsap of sinasappelsap?"); /* drink vragen koud */
+                    o2 = 8;
+                    loop = 0;
+                } else {
+                    System.out.println("Vul 'frisdrank' of 'sap' in.");
+                }
+            }
+        }
         }
     }
 
