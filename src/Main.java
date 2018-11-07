@@ -125,7 +125,7 @@ public class Main {
                     o2 = 6;
                     loop = 0;
                 } else {
-                    System.out.println("Vul 'koffie' of 'thee' in."); /* Drink vragen */
+                    System.out.println("Vul 'koffie' of 'thee' in."); /*  Drink vragen */
                 }
             } }
 
