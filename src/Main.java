@@ -57,15 +57,59 @@ public class Main {
             if (lc.equals("warm")) {
                 System.out.println("Vlees of vis?"); /* Eet vragen warm */
                 o1 = 2;
-                loop = 0;
+                loop = 6;
             } else if (lc.equals("koud")) {
                 System.out.println("salade of vis?"); /* Eet vragen koud */
                 o1 = 3;
-                loop = 0;
+                loop = 7;
             } else {
                 System.out.println("Vul 'warm' of 'koud' in.");
             }
         } }
+
+        String a6;
+
+        while (loop == 6) {
+
+            a6 = vend.nextLine();
+            lc = a6.toLowerCase();
+
+            if (o1 == 2) {
+                if (lc.equals("vlees")) {
+                    System.out.println("Biefstuk of kip"); /* Eet vragen warm */
+                    o1 = 4;
+                    loop = 0;
+                } else if (lc.equals("vis")) {
+                    System.out.println("Kibbeling of zalm?"); /* Eet vragen warm */
+                    o1 = 5;
+                    loop = 0;
+                } else {
+                    System.out.println("Vul 'vlees' of 'vis' in.");
+                }
+            }
+        }
+
+        String a7;
+
+        while (loop == 7) {
+
+            a7 = vend.nextLine();
+            lc = a7.toLowerCase();
+
+            if (o1 == 3) {
+                if (lc.equals("salade")) {
+                    System.out.println("Aardappel-salade of huzaren-salade"); /* Eet vragen koud */
+                    o1 = 6;
+                    loop = 0;
+                } else if (lc.equals("vis")) {
+                    System.out.println("Sushi of haring?"); /* Eet vragen koud */
+                    o1 = 7;
+                    loop = 0;
+                } else {
+                    System.out.println("Vul 'salade' of 'vis' in.");
+                }
+            }
+        }
 
         String a3;
 
