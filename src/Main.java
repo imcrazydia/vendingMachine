@@ -16,7 +16,7 @@ public class Main {
         "koffie", "thee", "frisdrank", "sap"};
         antwoorden = new String[28];
 
-        int g = 50;
+        int g = 25;
         int o1 = 0;
         int o2 = 0;
         int loop;
@@ -32,9 +32,10 @@ public class Main {
 
         System.out.println("Je hebt: €" + g); /* Je geld */
 
-        System.out.println("Wil iets te eten?"); /* Eet vragen */
+        System.out.println("Wil je iets eten?"); /* Eet vragen */
 
         Scanner vend = new Scanner(System.in);
+
 
         loop = 1;
 
@@ -42,6 +43,13 @@ public class Main {
 
             a1 = vend.nextLine();
             lc = a1.toLowerCase();
+
+            if (lc.contains("extrageld ")) {
+                String[] parts = lc.split(" "); /* Geld toevoegen */
+                int amount = Integer.parseInt(parts[1]);
+                g +=amount;
+                continue;
+            }
 
             if (lc.equals("ja")) {
                 System.out.println("Warm of koud?"); /* Eet vragen */
@@ -248,6 +256,8 @@ public class Main {
                     System.out.println("Vul 'cola' of 'fanta' in.");
                 }
             }
+
+
         }
 
         int coke = 2;
@@ -279,7 +289,9 @@ public class Main {
                 }
             }
 
-        }
+            }
+
+
 
         int fantas = 2;
         String a11;
@@ -926,7 +938,7 @@ public class Main {
 
             }
 
-        }
+}
 
 
 
