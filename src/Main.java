@@ -182,11 +182,11 @@ public class Main {
                 if (lc.equals("koffie")) {
                     System.out.println("Cappuccino of americano?"); /* Drink vragen warm */
                     o2 = 5;
-                    loop = 0;
+                    loop = 15;
                 } else if (lc.equals("thee")) {
-                    System.out.println("aardbei thee of citroen thee?"); /* Drink vragen warm */
+                    System.out.println("aardbeithee of citroenthee?"); /* Drink vragen warm */
                     o2 = 6;
-                    loop = 0;
+                    loop = 18;
                 } else if (lc.equals("geld")) {
                     System.out.println("Je hebt: €" + g);
                 } else {
@@ -260,7 +260,7 @@ public class Main {
                             "   ___    ___   | |   __ _ \n" +
                             "  / __|  / _ \\  | |  / _` |\n" +
                             " | (__  | (_) | | | | (_| |\n" +
-                            "  \\___|  \\___/  |_|  \\__,_| " + "Bedankt voor jou aankoop, \nJe hebt nog: €" + g + "\nwil je nog iets kopen?"); /* eind drink vraag koud cola */
+                            "  \\___|  \\___/  |_|  \\__,_| " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud cola */
                     o2 = 11;
                     loop = 100;
                 } else if (lc.equals("nee")) {
@@ -291,7 +291,7 @@ public class Main {
                             " |  _|  / _` | | '_ \\  | __|  / _` |\n" +
                             " | |   | (_| | | | | | | |_  | (_| |\n" +
                             " |_|    \\__,_| |_| |_|  \\__|  \\__,_|\n" +
-                            "                                    " + "Bedankt voor jou aankoop."); /* eind drink vraag koud fanta */
+                            "                                    " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud fanta */
                     o2 = 12;
                     loop = 100;
                 } else if (lc.equals("nee")) {
@@ -346,11 +346,11 @@ public class Main {
                                 " | (_| | | |_) | | |_) | |  __/ | | \\__ \\ | (_| | | |_) |\n" +
                                 "  \\__,_| | .__/  | .__/   \\___| |_| |___/  \\__,_| | .__/ \n" +
                                 "         | |     | |                              | |    \n" +
-                                "         |_|     |_|                              |_|     " + "Bedankt voor jou aankoop."); /* eind drink vraag koud fanta */
+                                "         |_|     |_|                              |_|     " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud appel */
                         o2 = 15;
                         loop = 100;
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag koud fanta */
+                        System.out.println("waarom koos je het dan?"); /* eind drink vraag koud appel */
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -378,11 +378,11 @@ public class Main {
                                 " \\__ \\ | | | | | | | (_| | | (_| | \\__ \\ | (_| | | |_) | | |_) | |  __/ | | \\__ \\ | (_| | | |_) |\n" +
                                 " |___/ |_| |_| |_|  \\__,_|  \\__,_| |___/  \\__,_| | .__/  | .__/   \\___| |_| |___/  \\__,_| | .__/ \n" +
                                 "                                                 | |     | |                              | |    \n" +
-                                "                                                 |_|     |_|                              |_|     " + "Bedankt voor jou aankoop."); /* eind drink vraag koud fanta */
+                                "                                                 |_|     |_|                              |_|     " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud sinaas */
                         o2 = 16;
                         loop = 100;
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag koud fanta */
+                        System.out.println("waarom koos je het dan?"); /* eind drink vraag koud sinaas */
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -392,6 +392,178 @@ public class Main {
 
             }
 
+            String a16;
+
+            while (loop == 15) {
+
+                a16 = vend.nextLine();
+                lc = a16.toLowerCase();
+
+                if (o2 == 5) {
+                    if (lc.equals("cappuccino")) {
+                        System.out.println("Dit item kost €2, weet je zeker dat je dit wilt?"); /* drink vraag warm cappuccino*/
+                        o2 = 17;
+                        loop = 16;
+                    } else if (lc.equals("americano")) {
+                        System.out.println("Dit item kost €3, weet je zeker dat je dit wilt?"); /* drink vraag warm americano*/
+                        o2 = 18;
+                        loop = 17;
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'cappuccino' of 'americano' in.");
+                    }
+                }
+            }
+
+            int cappuccino = 2;
+            String a17;
+
+            while (loop == 16) {
+
+                a17 = vend.nextLine();
+                lc = a17.toLowerCase();
+
+                if (o2 == 17) {
+                    if (lc.equals("ja")) {
+                        g = g - cappuccino;
+                        System.out.println("                                                        _                 \n" +
+                                "                                                      (_)                \n" +
+                                "   ___    __ _   _ __    _ __    _   _    ___    ___   _   _ __     ___  \n" +
+                                "  / __|  / _` | | '_ \\  | '_ \\  | | | |  / __|  / __| | | | '_ \\   / _ \\ \n" +
+                                " | (__  | (_| | | |_) | | |_) | | |_| | | (__  | (__  | | | | | | | (_) |\n" +
+                                "  \\___|  \\__,_| | .__/  | .__/   \\__,_|  \\___|  \\___| |_| |_| |_|  \\___/ \n" +
+                                "                | |     | |                                              \n" +
+                                "                |_|     |_|                                               " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm cappuccino */
+                        o2 = 19;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm cappuccino */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
+
+            int americano = 3;
+            String a18;
+
+            while (loop == 17) {
+
+                a18 = vend.nextLine();
+                lc = a18.toLowerCase();
+
+                if (o2 == 18) {
+                    if (lc.equals("ja")) {
+                        g = g - americano;
+                        System.out.println("                                    (_)                               \n" +
+                                "   __ _   _ __ ___     ___   _ __   _    ___    __ _   _ __     ___  \n" +
+                                "  / _` | | '_ ` _ \\   / _ \\ | '__| | |  / __|  / _` | | '_ \\   / _ \\ \n" +
+                                " | (_| | | | | | | | |  __/ | |    | | | (__  | (_| | | | | | | (_) |\n" +
+                                "  \\__,_| |_| |_| |_|  \\___| |_|    |_|  \\___|  \\__,_| |_| |_|  \\___/ \n" +
+                                "                                                                      " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm americano */
+                        o2 = 20;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm americano */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
+
+            String a19;
+
+            while (loop == 18) {
+
+                a19 = vend.nextLine();
+                lc = a19.toLowerCase();
+
+                if (o2 == 6) {
+                    if (lc.equals("aardbeithee")) {
+                        System.out.println("Dit item kost €1, weet je zeker dat je dit wilt?"); /* drink vraag warm aardbei*/
+                        o2 = 21;
+                        loop = 19;
+                    } else if (lc.equals("citroenthee")) {
+                        System.out.println("Dit item kost €1, weet je zeker dat je dit wilt?"); /* drink vraag warm citroen*/
+                        o2 = 22;
+                        loop = 20;
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'aardbeithee' of 'citroenthee' in.");
+                    }
+                }
+            }
+
+            int aardbei = 1;
+            String a20;
+
+            while (loop == 19) {
+
+                a20 = vend.nextLine();
+                lc = a20.toLowerCase();
+
+                if (o2 == 21) {
+                    if (lc.equals("ja")) {
+                        g = g - aardbei;
+                        System.out.println("                              _   _              _     _     _                   \n" +
+                                "                            | | | |            (_)   | |   | |                  \n" +
+                                "   __ _    __ _   _ __    __| | | |__     ___   _    | |_  | |__     ___    ___ \n" +
+                                "  / _` |  / _` | | '__|  / _` | | '_ \\   / _ \\ | |   | __| | '_ \\   / _ \\  / _ \\\n" +
+                                " | (_| | | (_| | | |    | (_| | | |_) | |  __/ | |   | |_  | | | | |  __/ |  __/\n" +
+                                "  \\__,_|  \\__,_| |_|     \\__,_| |_.__/   \\___| |_|    \\__| |_| |_|  \\___|  \\___|\n" +
+                                "                                                                                \n" +
+                                "                                                                                 " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm americano */
+                        o2 = 23;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm americano */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
+
+            int citroen = 1;
+            String a21;
+
+            while (loop == 20) {
+
+                a21 = vend.nextLine();
+                lc = a21.toLowerCase();
+
+                if (o2 == 22) {
+                    if (lc.equals("ja")) {
+                        g = g - citroen;
+                        System.out.println("          _   _                                     _     _                   \n" +
+                                "        (_) | |                                   | |   | |                  \n" +
+                                "   ___   _  | |_   _ __    ___     ___   _ __     | |_  | |__     ___    ___ \n" +
+                                "  / __| | | | __| | '__|  / _ \\   / _ \\ | '_ \\    | __| | '_ \\   / _ \\  / _ \\\n" +
+                                " | (__  | | | |_  | |    | (_) | |  __/ | | | |   | |_  | | | | |  __/ |  __/\n" +
+                                "  \\___| |_|  \\__| |_|     \\___/   \\___| |_| |_|    \\__| |_| |_|  \\___|  \\___|\n" +
+                                "                                                                              " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm americano */
+                        o2 = 24;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm americano */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
 
     }
 
@@ -400,7 +572,7 @@ public class Main {
         }
 
         /* Eet antwoorden: biefstuk, kip, kibbeling, zalm, aardappel-salade, huzaren-salade, sushi en haring */
-        /* drink antwoorden: cappucino, americano, aarbei thee, citroen thee, cola=, fanta=, appelsap= en sinasappelsap= */
+        /* drink antwoorden: cappucino=, americano=, aarbei thee=, citroen thee=, cola=, fanta=, appelsap= en sinasappelsap= */
 
 
 
