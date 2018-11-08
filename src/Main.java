@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
         String[] vragen;
-        vragen = new String[20];
+        vragen = new String[16];
 
         String[] antwoorden;
-        antwoorden = new String[20];
+        antwoorden = new String[32];
 
 
         int g = 50;
@@ -24,6 +24,7 @@ public class Main {
         int o1 = 0;
         int o2 = 0;
         int loop = 0;
+        int r = 0;
 
         loop = 1;
 
@@ -174,6 +175,8 @@ public class Main {
             } }
 
         String a8;
+        int r = 0;
+
 
         while (loop == 8) {
 
@@ -184,7 +187,7 @@ public class Main {
                 if (lc.equals("frisdrank")) {
                     System.out.println("Cola of fanta?"); /* drink vragen koud */
                     o2 = 7;
-                    loop = 0;
+                    loop = 9;
                 } else if (lc.equals("sap")) {
                     System.out.println("Appelsap of sinasappelsap?"); /* drink vragen koud */
                     o2 = 8;
@@ -193,7 +196,55 @@ public class Main {
                     System.out.println("Vul 'frisdrank' of 'sap' in.");
                 }
             }
+        } 
+
+        String a9;
+
+        while (loop == 9) {
+
+            a9 = vend.nextLine();
+            lc = a9.toLowerCase();
+
+            if (o2 == 7) {
+                if (lc.equals("cola")) {
+                    System.out.println("Dit item kost €2, weet je zeker dat je dit wilt?"); /* drink vraag koud cola */
+                    o2 = 9;
+                    loop = 10;
+                } else if (lc.equals("fanta")) {
+                    System.out.println("Dit item kost €2, weet je zeker dat je dit wilt?"); /* drink vraag koud fanta */
+                    o2 = 10;
+                    loop = 0;
+                } else {
+                    System.out.println("Vul 'cola' of 'fanta' in.");
+                }
+            }
         }
+
+        String a10;
+
+        while (loop == 10) {
+
+            a10 = vend.nextLine();
+            lc = a10.toLowerCase();
+
+            if (o2 == 9) {
+                if (lc.equals("ja")) {
+                    System.out.println("Bedankt voor jou aankoop, wil je nog iets kopen?"); /* eind drink vraag koud cola */
+                    o2 = 11;
+                    loop = 0;
+                } else if (lc.equals("nee")) {
+                    System.out.println(""); /* eind drink vraag koud cola */
+                    o2 = 12;
+                    loop = 8;
+                } else {
+                    System.out.println("Vul 'ja' of 'nee' in.");
+                }
+            }
+        }
+
+        /* Eet antwoorden: biefstuk, kip, kibbeling, zalm, aardappel-salade, huzaren-salade, sushi en haring */
+        /* drink antwoorden: cappucino, americano, aarbei thee, citroen thee, cola=, fanta, appelsap en sinasappelsap */
+
         }
     }
 
