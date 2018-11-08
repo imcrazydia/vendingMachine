@@ -19,6 +19,8 @@ public class Main {
         String a1;
         String lc;
 
+        System.out.println("\n[Welkom bij Dia's eten/drinken vending machine!]\n");
+
         loop = 100;
 
         while (loop == 100) {
@@ -109,13 +111,13 @@ public class Main {
 
             if (o1 == 3) {
                 if (lc.equals("salade")) {
-                    System.out.println("Aardappel-salade of huzaren-salade"); /* Eet vragen koud */
+                    System.out.println("Aardappelsalade of huzarensalade"); /* Eet vragen koud */
                     o1 = 6;
-                    loop = 0;
+                    loop = 27;
                 } else if (lc.equals("vis")) {
                     System.out.println("Sushi of haring?"); /* Eet vragen koud */
                     o1 = 7;
-                    loop = 0;
+                    loop = 30;
                 } else if (lc.equals("geld")) {
                     System.out.println("Je hebt: €" + g);
                 } else {
@@ -740,13 +742,188 @@ public class Main {
 
             }
 
+            String a28;
+
+            while (loop == 27) {
+
+                a28 = vend.nextLine();
+                lc = a28.toLowerCase();
+
+                if (o1 == 6) {
+                    if (lc.equals("aardappelsalade")) {
+                        System.out.println("Dit item kost €2, weet je zeker dat je dit wilt?"); /* eet vraag koud aardappel*/
+                        o1 = 16;
+                        loop = 28;
+                    } else if (lc.equals("huzarensalade")) {
+                        System.out.println("Dit item kost €3, weet je zeker dat je dit wilt?"); /* eet vraag koud huzaren*/
+                        o1 = 17;
+                        loop = 29;
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'aardappelsalade' of 'huzarensalade' in.");
+                    }
+                }
+            }
+
+            int aardappel = 2;
+            String a29;
+
+            while (loop == 28) {
+
+                a29 = vend.nextLine();
+                lc = a29.toLowerCase();
+
+                if (o1 == 16) {
+                    if (lc.equals("ja")) {
+                        g = g - aardappel;
+                        System.out.println("                            _                                  _                          _               _        \n" +
+                                "                            | |                                | |                        | |             | |       \n" +
+                                "   __ _    __ _   _ __    __| |   __ _   _ __    _ __     ___  | |  ______   ___    __ _  | |   __ _    __| |   ___ \n" +
+                                "  / _` |  / _` | | '__|  / _` |  / _` | | '_ \\  | '_ \\   / _ \\ | | |______| / __|  / _` | | |  / _` |  / _` |  / _ \\\n" +
+                                " | (_| | | (_| | | |    | (_| | | (_| | | |_) | | |_) | |  __/ | |          \\__ \\ | (_| | | | | (_| | | (_| | |  __/\n" +
+                                "  \\__,_|  \\__,_| |_|     \\__,_|  \\__,_| | .__/  | .__/   \\___| |_|          |___/  \\__,_| |_|  \\__,_|  \\__,_|  \\___|\n" +
+                                "                                        | |     | |                                                                 \n" +
+                                "                                        |_|     |_|                                                                  " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud aardappel */
+                        o1 = 18;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud aardappel */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
+
+            int huzaren = 4;
+            String a30;
+
+            while (loop == 29) {
+
+                a30 = vend.nextLine();
+                lc = a30.toLowerCase();
+
+                if (o1 == 17) {
+                    if (lc.equals("ja")) {
+                        g = g - huzaren;
+                        System.out.println("   _                                                                          _               _        \n" +
+                                " | |                                                                        | |             | |       \n" +
+                                " | |__    _   _   ____   __ _   _ __    ___   _ __    ______   ___    __ _  | |   __ _    __| |   ___ \n" +
+                                " | '_ \\  | | | | |_  /  / _` | | '__|  / _ \\ | '_ \\  |______| / __|  / _` | | |  / _` |  / _` |  / _ \\\n" +
+                                " | | | | | |_| |  / /  | (_| | | |    |  __/ | | | |          \\__ \\ | (_| | | | | (_| | | (_| | |  __/\n" +
+                                " |_| |_|  \\__,_| /___|  \\__,_| |_|     \\___| |_| |_|          |___/  \\__,_| |_|  \\__,_|  \\__,_|  \\___|\n" +
+                                "                                                                                                      \n" +
+                                "                                                                                                       " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud huzaren */
+                        o1 = 19;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud huzaren */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
+
+            String a31;
+
+            while (loop == 30) {
+
+                a31 = vend.nextLine();
+                lc = a31.toLowerCase();
+
+                if (o1 == 7) {
+                    if (lc.equals("sushi")) {
+                        System.out.println("Dit item kost €5, weet je zeker dat je dit wilt?"); /* eet vraag koud sushi*/
+                        o1 = 20;
+                        loop = 31;
+                    } else if (lc.equals("haring")) {
+                        System.out.println("Dit item kost €4, weet je zeker dat je dit wilt?"); /* eet vraag koud haring*/
+                        o1 = 21;
+                        loop = 32;
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'sushi' of 'haring' in.");
+                    }
+                }
+            }
+
+            int sushi = 5;
+            String a32;
+
+            while (loop == 31) {
+
+                a32 = vend.nextLine();
+                lc = a32.toLowerCase();
+
+                if (o1 == 20) {
+                    if (lc.equals("ja")) {
+                        g = g - sushi;
+                        System.out.println("                       _       _ \n" +
+                                "                     | |     (_)\n" +
+                                "  ___   _   _   ___  | |__    _ \n" +
+                                " / __| | | | | / __| | '_ \\  | |\n" +
+                                " \\__ \\ | |_| | \\__ \\ | | | | | |\n" +
+                                " |___/  \\__,_| |___/ |_| |_| |_|\n" +
+                                "                                 " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud sushi */
+                        o1 = 22;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud sushi */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
+
+            int haring = 4;
+            String a33;
+
+            while (loop == 32) {
+
+                a33 = vend.nextLine();
+                lc = a33.toLowerCase();
+
+                if (o1 == 21) {
+                    if (lc.equals("ja")) {
+                        g = g - haring;
+                        System.out.println("   _                      _                 \n" +
+                                " | |                    (_)                \n" +
+                                " | |__     __ _   _ __   _   _ __     __ _ \n" +
+                                " | '_ \\   / _` | | '__| | | | '_ \\   / _` |\n" +
+                                " | | | | | (_| | | |    | | | | | | | (_| |\n" +
+                                " |_| |_|  \\__,_| |_|    |_| |_| |_|  \\__, |\n" +
+                                "                                      __/ |\n" +
+                                "                                     |___/  " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud haring */
+                        o1 = 23;
+                        loop = 100;
+                    } else if (lc.equals("nee")) {
+                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud haring */
+                    } else if (lc.equals("geld")) {
+                        System.out.println("Je hebt: €" + g);
+                    } else {
+                        System.out.println("Vul 'ja' of 'nee' in.");
+                    }
+                }
+
+            }
+
     }
 
             }
 
         }
 
-        /* Eet antwoorden: biefstuk=, kip=, kibbeling=, zalm=, aardappel-salade, huzaren-salade, sushi en haring */
+        /* Eet antwoorden: biefstuk=, kip=, kibbeling=, zalm=, aardappel-salade=, huzaren-salade=, sushi= en haring= */
         /* drink antwoorden: cappucino=, americano=, aarbei thee=, citroen thee=, cola=, fanta=, appelsap= en sinasappelsap= */
 
 
