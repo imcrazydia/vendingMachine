@@ -4,12 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] vragen;
-        vragen = new String[16];
+        String[] vragen = {"Wil iets te eten?", "Warm of koud?", "Wil je dan iets te drinken?",
+                "Vlees of vis?", "Salade of vis?", "Biefstuk of kip", "Kibbeling of zalm?", "Aardappelsalade of huzarensalade", "Sushi of haring?", "Koffie of thee?", "Frisdrank of sap?", "Cappuccino of americano?",
+                "aardbeithee of citroenthee?", "Cola of fanta?", "Appelsap of sinaasappelsap?", "Dit item kost €2, weet je zeker dat je dit wilt?",
+                "waarom koos je het dan?", "Dit item kost €3, weet je zeker dat je dit wilt?", "Dit item kost €1, weet je zeker dat je dit wilt?", "Dit item kost €5, weet je zeker dat je dit wilt?",
+                "Dit item kost €4, weet je zeker dat je dit wilt?"};
+        vragen = new String[21];
 
-        String[] antwoorden;
-        antwoorden = new String[32];
-
+        String[] antwoorden = {"ja", "nee", "biefstuk", "kip", "kibbeling", "zalm", "aardappelsalade", "huzarensalade",
+                "sushi", "haring", "cappucino", "americano", "aardbeithee", "citroenthee", "cola", "fanta", "appelsap", "sinasappelsap", "geld", "warm", "koud", "vlees", "vis", "salade",
+        "koffie", "thee", "frisdrank", "sap"};
+        antwoorden = new String[28];
 
         int g = 50;
         int o1 = 0;
@@ -67,7 +72,7 @@ public class Main {
                     o1 = 2;
                     loop = 6;
                 } else if (lc.equals("koud")) {
-                    System.out.println("salade of vis?"); /* Eet vragen koud */
+                    System.out.println("Salade of vis?"); /* Eet vragen koud */
                     o1 = 3;
                     loop = 7;
                 } else if (lc.equals("geld")) {
@@ -231,7 +236,7 @@ public class Main {
             if (o2 == 7) {
                 if (lc.equals("cola")) {
                     System.out.println("Dit item kost €2, weet je zeker dat je dit wilt?"); /* drink vraag koud cola */
-                    o2 = 9;
+                            o2 = 9;
                     loop = 10;
                 } else if (lc.equals("fanta")) {
                     System.out.println("Dit item kost €2, weet je zeker dat je dit wilt?"); /* drink vraag koud fanta */
@@ -408,7 +413,7 @@ public class Main {
                         loop = 16;
                     } else if (lc.equals("americano")) {
                         System.out.println("Dit item kost €3, weet je zeker dat je dit wilt?"); /* drink vraag warm americano*/
-                        o2 = 18;
+                         o2 = 18;
                         loop = 17;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
@@ -578,7 +583,7 @@ public class Main {
                     if (lc.equals("biefstuk")) {
                         System.out.println("Dit item kost €3, weet je zeker dat je dit wilt?"); /* eet vraag warm biefstuk*/
                         o1 = 8;
-                        loop = 22;
+                                loop = 22;
                     } else if (lc.equals("kip")) {
                         System.out.println("Dit item kost €5, weet je zeker dat je dit wilt?"); /* eet vraag warm kip*/
                         o1 = 9;
@@ -923,8 +928,7 @@ public class Main {
 
         }
 
-        /* Eet antwoorden: biefstuk=, kip=, kibbeling=, zalm=, aardappel-salade=, huzaren-salade=, sushi= en haring= */
-        /* drink antwoorden: cappucino=, americano=, aarbei thee=, citroen thee=, cola=, fanta=, appelsap= en sinasappelsap= */
+
 
 
 
