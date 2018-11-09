@@ -16,7 +16,7 @@ public class Main {
         "koffie", "thee", "frisdrank", "sap"};
         antwoorden = new String[28];
 
-        int g = 25;
+        int g = 10;
         int o1 = 0;
         int o2 = 0;
         int loop;
@@ -270,6 +270,11 @@ public class Main {
 
             if (o2 == 9) {
                 if (lc.equals("ja")) {
+                    if (g - coke < 0){
+                    System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                    loop = 100;
+                }
+                else {
                     g = g - coke;
                     System.out.println("" +
                             "                 _         \n" +
@@ -280,8 +285,10 @@ public class Main {
                             "  \\___|  \\___/  |_|  \\__,_| " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud cola */
                     o2 = 11;
                     loop = 100;
+                }
                 } else if (lc.equals("nee")) {
-                    System.out.println("waarom koos je het dan?"); /* eind drink vraag koud cola */
+                    System.out.println("waarom koos je het dan?\n"); /* eind drink vraag koud cola */
+                    loop = 100;
                 } else if (lc.equals("geld")) {
                     System.out.println("Je hebt: €" + g);
                 } else {
@@ -303,6 +310,11 @@ public class Main {
 
             if (o2 == 10) {
                 if (lc.equals("ja")) {
+                    if(g - fantas < 0){
+                        System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                        loop = 100;
+                    }
+                    else {
                     g = g - fantas;
                     System.out.println("   __                   _           \n" +
                             "  / _|                 | |          \n" +
@@ -313,8 +325,10 @@ public class Main {
                             "                                    " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud fanta */
                     o2 = 12;
                     loop = 100;
+                }
                 } else if (lc.equals("nee")) {
-                    System.out.println("waarom koos je het dan?"); /* eind drink vraag koud fanta */
+                    System.out.println("waarom koos je het dan?\n"); /* eind drink vraag koud fanta */
+                    loop = 100;
                 } else if (lc.equals("geld")) {
                     System.out.println("Je hebt: €" + g);
                 } else {
@@ -358,18 +372,25 @@ public class Main {
 
                 if (o2 == 13) {
                     if (lc.equals("ja")) {
-                        g = g - appel;
-                        System.out.println("                                 | |                      \n" +
-                                "   __ _   _ __    _ __     ___  | |  ___    __ _   _ __  \n" +
-                                "  / _` | | '_ \\  | '_ \\   / _ \\ | | / __|  / _` | | '_ \\ \n" +
-                                " | (_| | | |_) | | |_) | |  __/ | | \\__ \\ | (_| | | |_) |\n" +
-                                "  \\__,_| | .__/  | .__/   \\___| |_| |___/  \\__,_| | .__/ \n" +
-                                "         | |     | |                              | |    \n" +
-                                "         |_|     |_|                              |_|     " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud appel */
-                        o2 = 15;
-                        loop = 100;
+                        if(g - appel < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
+                            g = g - appel;
+                            System.out.println("                                 | |                      \n" +
+                                    "   __ _   _ __    _ __     ___  | |  ___    __ _   _ __  \n" +
+                                    "  / _` | | '_ \\  | '_ \\   / _ \\ | | / __|  / _` | | '_ \\ \n" +
+                                    " | (_| | | |_) | | |_) | |  __/ | | \\__ \\ | (_| | | |_) |\n" +
+                                    "  \\__,_| | .__/  | .__/   \\___| |_| |___/  \\__,_| | .__/ \n" +
+                                    "         | |     | |                              | |    \n" +
+                                    "         |_|     |_|                              |_|     " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud appel */
+                            o2 = 15;
+                            loop = 100;
+                        }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag koud appel */
+                        System.out.println("waarom koos je het dan?\n"); /* eind drink vraag koud appel */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -389,6 +410,11 @@ public class Main {
 
                 if (o2 == 14) {
                     if (lc.equals("ja")) {
+                        if(g - sinaas < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - sinaas;
                         System.out.println("         _                                                                _                       \n" +
                                 "       (_)                                                              | |                      \n" +
@@ -400,8 +426,10 @@ public class Main {
                                 "                                                 |_|     |_|                              |_|     " + "\nBedankt voor jou aankoop."); /* eind drink vraag koud sinaas */
                         o2 = 16;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag koud sinaas */
+                        System.out.println("waarom koos je het dan?\n"); /* eind drink vraag koud sinaas */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -445,6 +473,11 @@ public class Main {
 
                 if (o2 == 17) {
                     if (lc.equals("ja")) {
+                        if(g - cappuccino < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - cappuccino;
                         System.out.println("                                                        _                 \n" +
                                 "                                                      (_)                \n" +
@@ -456,8 +489,10 @@ public class Main {
                                 "                |_|     |_|                                               " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm cappuccino */
                         o2 = 19;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm cappuccino */
+                        System.out.println("waarom koos je het dan?\n"); /* eind drink vraag warm cappuccino */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -477,6 +512,11 @@ public class Main {
 
                 if (o2 == 18) {
                     if (lc.equals("ja")) {
+                        if(g - americano < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - americano;
                         System.out.println("                                    (_)                               \n" +
                                 "   __ _   _ __ ___     ___   _ __   _    ___    __ _   _ __     ___  \n" +
@@ -486,8 +526,10 @@ public class Main {
                                 "                                                                      " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm americano */
                         o2 = 20;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm americano */
+                        System.out.println("waarom koos je het dan?\n"); /* eind drink vraag warm americano */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -529,8 +571,13 @@ public class Main {
                 a20 = vend.nextLine();
                 lc = a20.toLowerCase();
 
-                if (o2 == 21) {
+                if (o2 == 21)
                     if (lc.equals("ja")) {
+                        if(g - aardbei < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - aardbei;
                         System.out.println("                              _   _              _     _     _                   \n" +
                                 "                            | | | |            (_)   | |   | |                  \n" +
@@ -542,8 +589,10 @@ public class Main {
                                 "                                                                                 " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm aardbei thee */
                         o2 = 23;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm aardbei thee */
+                        System.out.println("waarom koos je het dan?\n"); /* eind drink vraag warm aardbei thee */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -551,7 +600,7 @@ public class Main {
                     }
                 }
 
-            }
+
 
             int citroen = 1;
             String a21;
@@ -563,6 +612,11 @@ public class Main {
 
                 if (o2 == 22) {
                     if (lc.equals("ja")) {
+                        if(g - citroen < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - citroen;
                         System.out.println("          _   _                                     _     _                   \n" +
                                 "        (_) | |                                   | |   | |                  \n" +
@@ -573,8 +627,10 @@ public class Main {
                                 "                                                                              " + "\nBedankt voor jou aankoop."); /* eind drink vraag warm citroen thee */
                         o2 = 24;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind drink vraag warm citroen thee */
+                        System.out.println("waarom koos je het dan?\n"); /* eind drink vraag warm citroen thee */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -618,6 +674,11 @@ public class Main {
 
                 if (o1 == 8) {
                     if (lc.equals("ja")) {
+                        if(g - biefstuk < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - biefstuk;
                         System.out.println("   _       _           __         _             _    \n" +
                                 " | |     (_)         / _|       | |           | |   \n" +
@@ -629,8 +690,10 @@ public class Main {
                                 "                                                     " + "\nBedankt voor jou aankoop."); /* eind eet vraag warm biefstuk */
                         o1 = 10;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag warm biefstuk */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag warm biefstuk */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -650,6 +713,11 @@ public class Main {
 
                 if (o1 == 9) {
                     if (lc.equals("ja")) {
+                        if(g - kip < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - kip;
                         System.out.println("   _      _         \n" +
                                 " | |    (_)        \n" +
@@ -661,8 +729,10 @@ public class Main {
                                 "            |_|     " + "\nBedankt voor jou aankoop."); /* eind eet vraag warm kip */
                         o1 = 11;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag warm kip */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag warm kip */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -706,6 +776,11 @@ public class Main {
 
                 if (o1 == 12) {
                     if (lc.equals("ja")) {
+                        if(g - kibbeling < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - kibbeling;
                         System.out.println("   _      _   _       _              _   _                 \n" +
                                 " | |    (_) | |     | |            | | (_)                \n" +
@@ -717,8 +792,10 @@ public class Main {
                                 "                                                    |___/  " + "\nBedankt voor jou aankoop."); /* eind eet vraag warm kibbeling */
                         o1 = 14;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag warm kibbeling */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag warm kibbeling */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -738,6 +815,11 @@ public class Main {
 
                 if (o1 == 13) {
                     if (lc.equals("ja")) {
+                        if(g - zalm < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - zalm;
                         System.out.println("                 _             \n" +
                                 "               | |            \n" +
@@ -748,8 +830,10 @@ public class Main {
                                 "                               " + "\nBedankt voor jou aankoop."); /* eind eet vraag warm zalm */
                         o1 = 15;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag warm zalm */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag warm zalm */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -793,6 +877,11 @@ public class Main {
 
                 if (o1 == 16) {
                     if (lc.equals("ja")) {
+                        if(g - aardappel < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - aardappel;
                         System.out.println("                            _                                  _                          _               _        \n" +
                                 "                            | |                                | |                        | |             | |       \n" +
@@ -804,8 +893,10 @@ public class Main {
                                 "                                        |_|     |_|                                                                  " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud aardappel */
                         o1 = 18;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud aardappel */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag koud aardappel */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -825,6 +916,11 @@ public class Main {
 
                 if (o1 == 17) {
                     if (lc.equals("ja")) {
+                        if(g - huzaren < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
                         g = g - huzaren;
                         System.out.println("   _                                                                          _               _        \n" +
                                 " | |                                                                        | |             | |       \n" +
@@ -836,8 +932,10 @@ public class Main {
                                 "                                                                                                       " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud huzaren */
                         o1 = 19;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud huzaren */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag koud huzaren */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -881,7 +979,11 @@ public class Main {
 
                 if (o1 == 20) {
                     if (lc.equals("ja")) {
-                        g = g - sushi;
+                        if (g - sushi < 0) {
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        } else {
+                            g = g - sushi;
                         System.out.println("                       _       _ \n" +
                                 "                     | |     (_)\n" +
                                 "  ___   _   _   ___  | |__    _ \n" +
@@ -891,8 +993,10 @@ public class Main {
                                 "                                 " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud sushi */
                         o1 = 22;
                         loop = 100;
+                    }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud sushi */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag koud sushi */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -911,20 +1015,28 @@ public class Main {
                 lc = a33.toLowerCase();
 
                 if (o1 == 21) {
-                    if (lc.equals("ja")) {
-                        g = g - haring;
-                        System.out.println("   _                      _                 \n" +
-                                " | |                    (_)                \n" +
-                                " | |__     __ _   _ __   _   _ __     __ _ \n" +
-                                " | '_ \\   / _` | | '__| | | | '_ \\   / _` |\n" +
-                                " | | | | | (_| | | |    | | | | | | | (_| |\n" +
-                                " |_| |_|  \\__,_| |_|    |_| |_| |_|  \\__, |\n" +
-                                "                                      __/ |\n" +
-                                "                                     |___/  " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud haring */
-                        o1 = 23;
-                        loop = 100;
+                    if (lc.equals("ja") ) {
+                        if(g - haring < 0){
+                            System.out.println("Je hebt niet genoeg geld voor dit product,\n voeg meer geld toe door 'extrageld (bedrag) te type.'");
+                            loop = 100;
+                        }
+                        else {
+                            g = g - haring;
+
+                            System.out.println("   _                      _                 \n" +
+                                    " | |                    (_)                \n" +
+                                    " | |__     __ _   _ __   _   _ __     __ _ \n" +
+                                    " | '_ \\   / _` | | '__| | | | '_ \\   / _` |\n" +
+                                    " | | | | | (_| | | |    | | | | | | | (_| |\n" +
+                                    " |_| |_|  \\__,_| |_|    |_| |_| |_|  \\__, |\n" +
+                                    "                                      __/ |\n" +
+                                    "                                     |___/  " + "\nBedankt voor jou aankoop."); /* eind eet vraag koud haring */
+                            o1 = 23;
+                            loop = 100;
+                        }
                     } else if (lc.equals("nee")) {
-                        System.out.println("waarom koos je het dan?"); /* eind eet vraag koud haring */
+                        System.out.println("waarom koos je het dan?\n"); /* eind eet vraag koud haring */
+                        loop = 100;
                     } else if (lc.equals("geld")) {
                         System.out.println("Je hebt: €" + g);
                     } else {
@@ -937,8 +1049,9 @@ public class Main {
     }
 
             }
-
 }
+
+
 
 
 
