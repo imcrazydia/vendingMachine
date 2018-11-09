@@ -15,6 +15,7 @@ elk item heeft zijn eigen prijs kaartje eraan hangen en dit wordt van jou begin 
 Nadat je een item hebt gekocht kan je door blijven kopen als je wilt of je stopt met kopen en word dan tot ziens gewenst
 en je kan ook geld toevoegen als je te weinig hebt je typed dan gewoon: 'extrageld 10'
 dan krijg je +10 euro bij je saldo en dat kan je checken door 'geld' te typen.
+Als je te weinig geld hebt kan je het item niet kopen en moet je 'extrageld (bedrag)' gebruiken.
 
 ## Alle items die je kan kopen:
 ### Eten:
